@@ -14,7 +14,7 @@ DEPLOY_TO_GITHUB: &DEPLOY_TO_GITHUB
     - name="msgpack2json-$TRAVIS_TAG-$TARGET"
     - mkdir $name
     - cp target/$TARGET/release/msgpack2json $name/
-    - cp README.md LICENSE-MIT LICENSE-APACHE $name/
+    - cp README.md $name/
     - tar czvf $name.tar.gz $name
   deploy:
     provider: releases
